@@ -6,3 +6,9 @@
  ::initialize-db
  (fn  [_ _]
    db/default-db))
+
+(re-frame/reg-event-db
+  :increment
+  []
+  (fn [db]
+    (update db :number inc)))

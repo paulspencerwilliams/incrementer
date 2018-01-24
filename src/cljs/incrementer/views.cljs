@@ -5,4 +5,6 @@
 
 (defn main-panel []
   (let [number (re-frame/subscribe [::subs/number])]
-    [:div @number]))
+    [:div
+     [:div @number]
+     [:button {:on-click #(re-frame/dispatch [:increment])} "inc."]]))

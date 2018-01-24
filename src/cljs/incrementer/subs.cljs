@@ -2,6 +2,6 @@
   (:require [re-frame.core :as re-frame]))
 
 (re-frame/reg-sub
- ::name
+ ::number
  (fn [db]
-   (:name db)))
+   (:number db)))

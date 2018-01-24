@@ -4,5 +4,5 @@
             ))
 
 (defn main-panel []
-  (let [name (re-frame/subscribe [::subs/name])]
-    [:div "Hello from " @name]))
+  (let [number (re-frame/subscribe [::subs/number])]
+    [:div @number]))
